@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HGEngine", "HGEngine\HGEngine.vcxproj", "{37E6EF10-77B6-4F93-9A84-33FD4EA7A3E0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SandBox", "SandBox\SandBox.vcxproj", "{1791BCDC-0B30-4C9B-9C5D-B8D1E8D7B2CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -15,6 +17,10 @@ Global
 		{37E6EF10-77B6-4F93-9A84-33FD4EA7A3E0}.Debug|x64.Build.0 = Debug|x64
 		{37E6EF10-77B6-4F93-9A84-33FD4EA7A3E0}.Release|x64.ActiveCfg = Release|x64
 		{37E6EF10-77B6-4F93-9A84-33FD4EA7A3E0}.Release|x64.Build.0 = Release|x64
+		{1791BCDC-0B30-4C9B-9C5D-B8D1E8D7B2CE}.Debug|x64.ActiveCfg = Debug|x64
+		{1791BCDC-0B30-4C9B-9C5D-B8D1E8D7B2CE}.Debug|x64.Build.0 = Debug|x64
+		{1791BCDC-0B30-4C9B-9C5D-B8D1E8D7B2CE}.Release|x64.ActiveCfg = Release|x64
+		{1791BCDC-0B30-4C9B-9C5D-B8D1E8D7B2CE}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
