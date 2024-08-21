@@ -4,6 +4,7 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/sinks/stdout_color_sinks.h"
 
 namespace HGEngine
 {
@@ -22,5 +23,20 @@ namespace HGEngine
 
 	};
 }
+
+// Core log Macros
+#define HGE_CORE_TRACE(...) ::HGEngine::Log::GetCoreLogger()->trace(__VA_ARGS__)
+#define HGE_CORE_INFO(...)	::HGEngine::Log::GetCoreLogger()->info(__VA_ARGS__)
+#define HGE_CORE_WARN(...)	::HGEngine::Log::GetCoreLogger()->warn(__VA_ARGS__)
+#define HGE_CORE_ERROR(...) ::HGEngine::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define HGE_CORE_FATAL(...) ::HGEngine::Log::GetCoreLogger()->fatal(__VA_ARGS__)
+
+// Client log Macros
+#define HGE_TRACE(...)	::HGEngine::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define HGE_INFO(...)	::HGEngine::Log::GetClientLogger()->info(__VA_ARGS__)
+#define HGE_WARN(...)	::HGEngine::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define HGE_ERROR(...)	::HGEngine::Log::GetClientLogger()->error(__VA_ARGS__)
+#define HGE_FATAL(...)	::HGEngine::Log::GetClientLogger()->fatal(__VA_ARGS__)
+
 
 
