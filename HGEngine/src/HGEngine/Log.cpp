@@ -21,7 +21,7 @@ namespace HGEngine
 		s_ClientLogger->set_level(spdlog::level::trace);
 
 		// testing to force bat file to remake project. 
-		int test = 1;
+		int test = 2;
 	}
 }
 
