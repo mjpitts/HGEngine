@@ -57,9 +57,9 @@ project "HGEngine"
 		defines"HZ_DIST"
 		optimize "On"
 
-project "Sandbox"
-	location "HGEngine"
-	kind "SharedLib"
+project "SandBox"
+	location "SandBox"
+	kind "ConsoleApp"
 	language "C++"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
