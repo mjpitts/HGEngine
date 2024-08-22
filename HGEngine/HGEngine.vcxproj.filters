@@ -15,13 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\HGEngine\Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="src\HGEngine\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HGEngine\Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="src\HGEngine\Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\HGEngine.h">
+    <ClInclude Include="src\HGEngine\Core.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\HGEngine\EntryPoint.h">
@@ -30,13 +35,8 @@
     <ClInclude Include="src\HGEngine\Log.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\HGEngine\Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\HGEngine\Log.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="src\HGEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

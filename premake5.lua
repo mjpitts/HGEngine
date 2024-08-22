@@ -1,5 +1,6 @@
 workspace "HGEngine"
 	architecture "x64"
+	startproject "SandBox"
 
 	configurations
 	{
