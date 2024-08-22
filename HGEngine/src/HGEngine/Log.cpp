@@ -20,8 +20,6 @@ namespace HGEngine
 		s_ClientLogger = spdlog::stdout_color_mt("Application");
 		s_ClientLogger->set_level(spdlog::level::trace);
 
-		// testing to force bat file to remake project. 
-		int test = 2;
 	}
 }
 
