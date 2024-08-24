@@ -23,6 +23,10 @@
     <ClInclude Include="src\HGEngine\Application.h" />
     <ClInclude Include="src\HGEngine\Core.h" />
     <ClInclude Include="src\HGEngine\EntryPoint.h" />
+    <ClInclude Include="src\HGEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\HGEngine\Events\Event.h" />
+    <ClInclude Include="src\HGEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\HGEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\HGEngine\Log.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
