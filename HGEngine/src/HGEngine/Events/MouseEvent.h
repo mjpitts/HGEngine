@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace HGEngine
 {
 	class HGE_API MouseMovedEvent : public Event
