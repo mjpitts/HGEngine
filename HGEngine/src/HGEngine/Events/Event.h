@@ -46,15 +46,15 @@ namespace HGEngine
 	{
 		friend class EventDispatcher;
 	public:
-		virtual EventType EventType() const = 0;
+		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
-		virtual int GetCategoryFlag() const = 0;
+		virtual int GetCategoryFlags() const = 0;
 		virtual std::string ToString() const { return GetName(); }
 
 
 		inline bool IsInCateGory(EventCategory category)
 		{
-			return GetCategoryFlag() & category;
+			return GetCategoryFlags() & category;
 		}
 
 	protected:
@@ -64,6 +64,29 @@ namespace HGEngine
 
 	class EventDispatcher
 	{
+		template<typename T>
+		using EventFn = std::function<bool(T&)>;
+	private:
+		Event& m_Event;
+	public:
+		EventDispatcher(Event& event)
+			:m_Event(event) {}
+
+		template<typename T>
+		bool Dispatch(EventFn<T> func) 
+		{
+			if (m_Event.EventType() == t::GetStaticType())
+			{
+				m_Event.m_Handled == func(*(T*)&m_Event);
+				return true;
+			}
+			return false;
+		}
 	};
+
+	inline std::ostream& operator<<(std::ostream& os, const Event& e)
+	{
+		return os << e.ToString();
+	}
 
 }
