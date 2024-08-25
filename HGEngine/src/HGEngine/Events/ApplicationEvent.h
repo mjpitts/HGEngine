@@ -34,7 +34,7 @@ namespace HGEngine
 	public:
 		WindowCLoseEvent() {}
 
-		EVENT_CLASS_TYPE(WindowCLose)
+		EVENT_CLASS_TYPE(WindowClose)
 		EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
 

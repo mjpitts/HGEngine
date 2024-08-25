@@ -17,7 +17,7 @@ namespace HGEngine
 	enum class EventType
 	{
 		None = 0,
-		WindowClose, Windowresize, WindowFocus, WindowLostFocus, WindowMoved,
+		WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 		AppTick, AppUpdate, AppRender,
 		KeyPressed, KeyReleased, 
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
@@ -37,8 +37,8 @@ namespace HGEngine
 	};
 
 #define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
-								virtual EventType GetEventType() { return GetStaticType(); }\
-								virtual cost char* GetName() const override {return #type; }
+								virtual EventType GetEventType() const override { return GetStaticType(); }\
+								virtual const char* GetName() const override {return #type; }
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
@@ -75,7 +75,7 @@ namespace HGEngine
 		template<typename T>
 		bool Dispatch(EventFn<T> func) 
 		{
-			if (m_Event.EventType() == t::GetStaticType())
+			if (m_Event.GetEventType() == T::GetStaticType())
 			{
 				m_Event.m_Handled == func(*(T*)&m_Event);
 				return true;
